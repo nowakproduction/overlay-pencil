@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OverlayPen — rysowanie po obrazie z OBS-a na iPadzie</title>
+    <meta name="description" content="OverlayPen to aplikacja na iPada do rysowania po obrazie z OBS-a. Warstwa rysunku wraca do OBS-a jako osobne, przezroczyste źródło NDI®.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="./">Overlay<span>Pen</span></a>
+        <nav>
+            <a href="./" aria-current="page">O aplikacji</a>
+            <a href="wsparcie.html">Pomoc</a>
+            <a href="mac.html">Mac</a>
+            <a href="prywatnosc.html">Prywatność</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrap">
+        <h1>Rysuj po obrazie z OBS-a na iPadzie</h1>
+        <p class="lead">OverlayPen pokazuje na iPadzie obraz z OBS-a. Rysujesz po nim rysikiem albo palcem, a rysunek wraca do OBS-a jako osobne, przezroczyste źródło. Widzowie widzą Twoje adnotacje na żywo, nałożone na obraz.</p>
+
+        <div class="card">
+            <p><strong>Wkrótce w App Store.</strong> Aplikacja jest w przygotowaniu do wydania.</p>
+        </div>
+
+        <h2>Jak to działa</h2>
+        <ol class="steps">
+            <li>OBS wysyła obraz programu w sieci lokalnej przez <a href="https://ndi.video/">NDI®</a>, a iPad go odbiera.</li>
+            <li>Rysujesz po tym obrazie na iPadzie. Możesz zmieniać kolor i grubość, cofać kreski i czyścić całość jednym dotknięciem.</li>
+            <li>iPad odsyła do OBS-a <strong>samą warstwę rysunku</strong>, z przezroczystym tłem. W OBS-ie kładziesz ją nad obrazem i to OBS składa całość.</li>
+        </ol>
+        <p>iPad nie odsyła obrazu wideo, tylko rysunek. Dzięki temu nic nie traci na jakości i nie ma podwójnego kodowania pełnej klatki.</p>
+
+        <h2>Czego potrzebujesz</h2>
+        <ul>
+            <li>iPada z iPadOS 17 lub nowszym.</li>
+            <li>Komputera z <a href="https://obsproject.com/">OBS Studio</a> i wtyczką <a href="https://github.com/DistroAV/DistroAV">DistroAV</a>, która dodaje do OBS-a obsługę NDI.</li>
+            <li>iPada i komputera w tej samej sieci lokalnej. Najlepiej z komputerem podłączonym kablem i iPadem w sieci 5 GHz.</li>
+        </ul>
+        <p>Konfigurację krok po kroku znajdziesz w <a href="wsparcie.html">pomocy</a>.</p>
+
+        <h2>Sterowanie filmem na komputerze</h2>
+        <p>Jeśli na komputerze leci film, na przykład z YouTube'a w przeglądarce, możesz go zatrzymywać i przewijać o 5 albo 10 sekund prosto z iPada. Potrzebna jest do tego darmowa aplikacja <a href="mac.html">OverlayPen Remote na Maca</a>. Bez niej OverlayPen działa normalnie.</p>
+    </div>
+</main>
+
+<footer class="site">
+    <div class="wrap">
+        <p>© NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="prywatnosc.html">Polityka prywatności</a></p>
+        <p>NDI® is a registered trademark of Vizrt NDI AB. <a href="https://ndi.video/">ndi.video</a></p>
+    </div>
+</footer>
+</body>
+</html>

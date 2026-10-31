@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OverlayPen Remote na Maca — OverlayPen</title>
+    <meta name="description" content="Darmowa aplikacja na Maca: zatrzymuj i przewijaj film na komputerze prosto z iPada z OverlayPenem.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="./">Overlay<span>Pen</span></a>
+        <nav>
+            <a href="./">O aplikacji</a>
+            <a href="wsparcie.html">Pomoc</a>
+            <a href="mac.html" aria-current="page">Mac</a>
+            <a href="prywatnosc.html">Prywatność</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrap">
+        <h1>OverlayPen Remote na Maca</h1>
+        <p class="lead">Zatrzymuj i przewijaj film na komputerze prosto z iPada, bez podchodzenia do klawiatury. Działa z YouTube'em w przeglądarce, z VLC, QuickTime'em i każdym odtwarzaczem, który obsługuje te same skróty.</p>
+
+        <a class="button" href="https://github.com/nowakproduction/overlaypen-app/releases/latest/download/OverlayPen-Remote.zip">Pobierz OverlayPen Remote</a>
+        <p class="note">Darmowa · macOS 13 lub nowszy · Mac z Apple Silicon albo z procesorem Intel · podpisana i poświadczona przez Apple</p>
+
+        <h2>Instalacja</h2>
+        <ol class="steps">
+            <li>Otwórz pobrany plik ZIP i przeciągnij <strong>OverlayPen Remote</strong> do folderu <em>Aplikacje</em>.</li>
+            <li>Uruchom aplikację. Nie ma okna, tylko ikonę <strong>⏯</strong> w pasku menu u góry ekranu.</li>
+            <li>
+                <strong>Przyznaj zgodę Dostępność.</strong> Bez niej aplikacja nie może wysyłać skrótów klawiszowych do odtwarzacza. macOS zapyta o nią przy pierwszym uruchomieniu. Jeśli okno zniknęło, otwórz Ustawienia systemowe → <em>Prywatność i ochrona → Dostępność</em> i włącz <em>OverlayPen Remote</em>. W menu ⏯ pojawi się wtedy „Zgoda Dostępność: przyznana”.
+            </li>
+            <li>Zezwól na dostęp do sieci lokalnej, gdy macOS o to zapyta. Dzięki temu iPad znajdzie komputer.</li>
+            <li>
+                <strong>Sparuj iPada.</strong> Odczytaj sześciocyfrowy PIN z menu ⏯. Na iPadzie otwórz w OverlayPenie Wybierz źródło → <em>Sterowanie komputerem</em> i wpisz PIN. Po połączeniu na pasku pod obrazem pojawią się przyciski −10, −5, pauza, +5 i +10.
+            </li>
+        </ol>
+
+        <h2>Jak to działa</h2>
+        <p>iPad wysyła polecenie, a OverlayPen Remote naciska na komputerze skrót klawiszowy odtwarzacza: <kbd>K</kbd> to pauza, <kbd>J</kbd> i <kbd>L</kbd> przewijają o 10 sekund, a strzałki <kbd>←</kbd> i <kbd>→</kbd> o 5 sekund.</p>
+        <p>Domyślnie skróty trafiają do aplikacji, która jest na wierzchu. Jeśli na komputerze pracujesz w czymś innym, wybierz w menu ⏯ → <em>Steruj aplikacją</em> konkretną aplikację z filmem. Skróty trafią do niej, nawet gdy nie będzie na wierzchu.</p>
+
+        <h2>Film z przeglądarki w OBS-ie</h2>
+        <p>Jeśli OBS przechwytuje okno przeglądarki z YouTube'em, a Ty sterujesz nim z iPada, przeglądarka nie jest aktywnym oknem. Chrome może wtedy zwalniać renderowanie, a YouTube obniżać jakość. Dwie rzeczy temu zapobiegają:</p>
+        <ul>
+            <li>Ustaw w odtwarzaczu YouTube'a jakość na sztywno: koło zębate → Jakość → 1080p zamiast „Auto”.</li>
+            <li>Zamknij Chrome w całości (<kbd>⌘Q</kbd>) i uruchom go z Terminala tak:</li>
+        </ul>
+        <pre><code>open -a "Google Chrome" --args --disable-backgrounding-occluded-windows --disable-renderer-backgrounding</code></pre>
+
+        <h2>Odinstalowanie</h2>
+        <p>Zakończ aplikację z menu ⏯ i przenieś ją z folderu <em>Aplikacje</em> do kosza. Wpis w <em>Prywatność i ochrona → Dostępność</em> możesz usunąć przyciskiem „−”.</p>
+
+        <p class="note">OverlayPen Remote zawiera biblioteki NDI®. Noty licencyjne tych bibliotek są w pakiecie aplikacji: <code>Contents/Resources/libndi_licenses.txt</code>.</p>
+    </div>
+</main>
+
+<footer class="site">
+    <div class="wrap">
+        <p>© NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="prywatnosc.html">Polityka prywatności</a></p>
+        <p>NDI® is a registered trademark of Vizrt NDI AB. <a href="https://ndi.video/">ndi.video</a></p>
+    </div>
+</footer>
+</body>
+</html>

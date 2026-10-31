@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pomoc — OverlayPen</title>
+    <meta name="description" content="Konfiguracja OBS-a i OverlayPena krok po kroku, najczęstsze problemy i kontakt.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+    <div class="wrap">
+        <a class="brand" href="./">Overlay<span>Pen</span></a>
+        <nav>
+            <a href="./">O aplikacji</a>
+            <a href="wsparcie.html" aria-current="page">Pomoc</a>
+            <a href="mac.html">Mac</a>
+            <a href="prywatnosc.html">Prywatność</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="wrap">
+        <h1>Pomoc</h1>
+        <p class="lead">Jak połączyć OverlayPena z OBS-em i co zrobić, gdy coś nie działa.</p>
+
+        <div class="card">
+            <p><strong>Kontakt:</strong> <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a></p>
+            <p class="note">Napisz, jakiego masz iPada, jaką wersję OBS-a i co dokładnie widzisz. Wersję OverlayPena znajdziesz w aplikacji: Wybierz źródło → Informacje.</p>
+        </div>
+
+        <h2>Konfiguracja krok po kroku</h2>
+        <ol class="steps">
+            <li>
+                <strong>Zainstaluj w OBS-ie wtyczkę NDI.</strong>
+                Pobierz <a href="https://github.com/DistroAV/DistroAV">DistroAV</a> i zainstaluj ją według instrukcji na stronie wtyczki, razem z NDI Runtime. Potem uruchom OBS ponownie.
+            </li>
+            <li>
+                <strong>Włącz wyjście NDI w OBS-ie.</strong>
+                Narzędzia → <em>DistroAV NDI Settings</em> (w starszych wersjach <em>NDI Output Settings</em>) → zaznacz <em>Main Output</em>. Od teraz OBS wysyła obraz programu w sieci lokalnej.
+            </li>
+            <li>
+                <strong>Wybierz OBS na iPadzie.</strong>
+                Uruchom OverlayPena i dotknij <em>Wybierz źródło</em>. Przy pierwszym uruchomieniu iPad zapyta o dostęp do sieci lokalnej. Wybierz <em>Zezwól</em>, bo bez tego aplikacja nie znajdzie OBS-a. Na liście <em>Źródła w sieci</em> wybierz wyjście OBS-a.
+            </li>
+            <li>
+                <strong>Dodaj warstwę rysunku w OBS-ie.</strong>
+                W scenie dodaj źródło <em>NDI Source</em> i wybierz <code>NAZWA-IPADA (OverlayPen)</code>. Połóż je <strong>nad</strong> obrazem, który wysyłasz na iPada, i rozciągnij na cały kadr.
+            </li>
+            <li>
+                <strong>Sprawdź tło warstwy.</strong>
+                Narysuj coś na iPadzie. Kreski powinny pojawić się w OBS-ie na przezroczystym tle. Jeśli zamiast tego widzisz czarne tło, przeczytaj niżej o <a href="#tlo">tle warstwy</a>.
+            </li>
+        </ol>
+
+        <h2 id="tlo">Tło warstwy: kanał alfa albo kluczowanie</h2>
+        <p>Ustawienie jest na iPadzie: Wybierz źródło → <em>Wysyłka do OBS</em> → <em>Tło warstwy rysunku</em>.</p>
+        <h3>Kanał alfa (domyślnie)</h3>
+        <p>Tło jest po prostu przezroczyste i nic więcej nie trzeba ustawiać. W źródle NDI w OBS-ie zostaw tryb latencji <em>Normal</em>.</p>
+        <h3>Kluczowanie</h3>
+        <p>Przydaje się, gdy chcesz trybu latencji <em>Lowest</em>, który nie przenosi przezroczystości. iPad wysyła wtedy rysunek na tle w kolorze magenty. W OBS-ie dodaj do źródła NDI filtr <em>Chroma Key</em> i wybierz kolor <em>Magenta</em>. Fioletu nie ma wtedy w palecie, żeby filtr nie wycinał go razem z tłem.</p>
+
+        <h2>Najczęstsze problemy</h2>
+        <dl class="faq">
+            <dt>Lista źródeł na iPadzie jest pusta</dt>
+            <dd>
+                Sprawdź, czy iPad i komputer są w tej samej sieci i czy w OBS-ie jest włączone wyjście NDI (krok 2).
+                Jeśli przy pierwszym uruchomieniu wybrałeś „Nie zezwalaj”, włącz dostęp w Ustawieniach iPada: <em>Aplikacje → OverlayPen → Sieć lokalna</em>. Jeśli źródła dalej się nie pojawiają, zamknij aplikację i uruchom ją ponownie.
+            </dd>
+
+            <dt>OBS nie widzi źródła „OverlayPen”</dt>
+            <dd>
+                OverlayPen musi być otwarty na ekranie iPada, bo w tle iPadOS wstrzymuje wysyłanie. Sprawdź też, czy zapora na komputerze nie blokuje OBS-a w sieci lokalnej.
+            </dd>
+
+            <dt>W OBS-ie warstwa ma czarne tło</dt>
+            <dd>Ustaw w źródle NDI tryb latencji <em>Normal</em> albo przełącz tło warstwy na kluczowanie (<a href="#tlo">opis wyżej</a>).</dd>
+
+            <dt>Rysunek jest przesunięty względem obrazu</dt>
+            <dd>Warstwa i obraz muszą zajmować w scenie OBS-a ten sam kadr. Rozciągnij źródło OverlayPen na cały ekran, tak jak obraz pod nim.</dd>
+
+            <dt>Obraz na iPadzie się zacina</dt>
+            <dd>
+                Pełny obraz 1080p z OBS-a potrzebuje kilkudziesięciu Mbit/s, a Wi-Fi dzieli to pasmo z warstwą rysunku. Pomagają, po kolei: komputer podłączony kablem, iPad w sieci 5 GHz, a na iPadzie Wybierz źródło → <em>Jakość obrazu z sieci</em> → <em>Oszczędna</em>. To ustawienie zmniejsza tylko podgląd na iPadzie, a rysunek wraca do OBS-a w pełnej ostrości.
+            </dd>
+
+            <dt>Jak zatrzymać albo przewinąć film na komputerze z iPada?</dt>
+            <dd>Potrzebna jest darmowa aplikacja <a href="mac.html">OverlayPen Remote na Maca</a>. Przyciski przewijania pojawiają się na iPadzie dopiero po połączeniu z nią.</dd>
+        </dl>
+    </div>
+</main>
+
+<footer class="site">
+    <div class="wrap">
+        <p>© NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="prywatnosc.html">Polityka prywatności</a></p>
+        <p>NDI® is a registered trademark of Vizrt NDI AB. <a href="https://ndi.video/">ndi.video</a></p>
+    </div>
+</footer>
+</body>
+</html>
