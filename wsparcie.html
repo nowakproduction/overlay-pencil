@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pomoc — OverlayPen</title>
-    <meta name="description" content="Konfiguracja OBS-a i OverlayPena krok po kroku, najczęstsze problemy i kontakt.">
+    <title>Pomoc — Overlay Pencil</title>
+    <meta name="description" content="Konfiguracja OBS-a i aplikacji Overlay Pencil krok po kroku, najczęstsze problemy i kontakt.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site">
     <div class="wrap">
-        <a class="brand" href="./">Overlay<span>Pen</span></a>
+        <a class="brand" href="./">Overlay <span>Pencil</span></a>
         <nav>
             <a href="./">O aplikacji</a>
             <a href="wsparcie.html" aria-current="page">Pomoc</a>
@@ -23,11 +23,11 @@
 <main>
     <div class="wrap">
         <h1>Pomoc</h1>
-        <p class="lead">Jak połączyć OverlayPena z OBS-em i co zrobić, gdy coś nie działa.</p>
+        <p class="lead">Jak połączyć Overlay Pencil z OBS-em i co zrobić, gdy coś nie działa.</p>
 
         <div class="card">
             <p><strong>Kontakt:</strong> <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a></p>
-            <p class="note">Napisz, jakiego masz iPada, jaką wersję OBS-a i co dokładnie widzisz. Wersję OverlayPena znajdziesz w aplikacji: Wybierz źródło → Informacje.</p>
+            <p class="note">Napisz, jakiego masz iPada, jaką wersję OBS-a i co dokładnie widzisz. Wersję aplikacji znajdziesz w niej samej: Wybierz źródło → Informacje.</p>
         </div>
 
         <h2>Konfiguracja krok po kroku</h2>
@@ -42,11 +42,11 @@
             </li>
             <li>
                 <strong>Wybierz OBS na iPadzie.</strong>
-                Uruchom OverlayPena i dotknij <em>Wybierz źródło</em>. Przy pierwszym uruchomieniu iPad zapyta o dostęp do sieci lokalnej. Wybierz <em>Zezwól</em>, bo bez tego aplikacja nie znajdzie OBS-a. Na liście <em>Źródła w sieci</em> wybierz wyjście OBS-a.
+                Uruchom Overlay Pencil i dotknij <em>Wybierz źródło</em>. Przy pierwszym uruchomieniu iPad zapyta o dostęp do sieci lokalnej. Wybierz <em>Zezwól</em>, bo bez tego aplikacja nie znajdzie OBS-a. Na liście <em>Źródła w sieci</em> wybierz wyjście OBS-a.
             </li>
             <li>
                 <strong>Dodaj warstwę rysunku w OBS-ie.</strong>
-                W scenie dodaj źródło <em>NDI Source</em> i wybierz <code>NAZWA-IPADA (OverlayPen)</code>. Połóż je <strong>nad</strong> obrazem, który wysyłasz na iPada, i rozciągnij na cały kadr.
+                W scenie dodaj źródło <em>NDI Source</em> i wybierz <code>NAZWA-IPADA (Overlay Pencil)</code>. Połóż je <strong>nad</strong> obrazem, który wysyłasz na iPada, i rozciągnij na cały kadr.
             </li>
             <li>
                 <strong>Sprawdź tło warstwy.</strong>
@@ -66,19 +66,19 @@
             <dt>Lista źródeł na iPadzie jest pusta</dt>
             <dd>
                 Sprawdź, czy iPad i komputer są w tej samej sieci i czy w OBS-ie jest włączone wyjście NDI (krok 2).
-                Jeśli przy pierwszym uruchomieniu wybrałeś „Nie zezwalaj”, włącz dostęp w Ustawieniach iPada: <em>Aplikacje → OverlayPen → Sieć lokalna</em>. Jeśli źródła dalej się nie pojawiają, zamknij aplikację i uruchom ją ponownie.
+                Jeśli przy pierwszym uruchomieniu wybrałeś „Nie zezwalaj”, włącz dostęp w Ustawieniach iPada: <em>Aplikacje → Overlay Pencil → Sieć lokalna</em>. Jeśli źródła dalej się nie pojawiają, zamknij aplikację i uruchom ją ponownie.
             </dd>
 
-            <dt>OBS nie widzi źródła „OverlayPen”</dt>
+            <dt>OBS nie widzi źródła „Overlay Pencil”</dt>
             <dd>
-                OverlayPen musi być otwarty na ekranie iPada, bo w tle iPadOS wstrzymuje wysyłanie. Sprawdź też, czy zapora na komputerze nie blokuje OBS-a w sieci lokalnej.
+                Overlay Pencil musi być otwarty na ekranie iPada, bo w tle iPadOS wstrzymuje wysyłanie. Sprawdź też, czy zapora na komputerze nie blokuje OBS-a w sieci lokalnej.
             </dd>
 
             <dt>W OBS-ie warstwa ma czarne tło</dt>
             <dd>Ustaw w źródle NDI tryb latencji <em>Normal</em> albo przełącz tło warstwy na kluczowanie (<a href="#tlo">opis wyżej</a>).</dd>
 
             <dt>Rysunek jest przesunięty względem obrazu</dt>
-            <dd>Warstwa i obraz muszą zajmować w scenie OBS-a ten sam kadr. Rozciągnij źródło OverlayPen na cały ekran, tak jak obraz pod nim.</dd>
+            <dd>Warstwa i obraz muszą zajmować w scenie OBS-a ten sam kadr. Rozciągnij źródło Overlay Pencil na cały ekran, tak jak obraz pod nim.</dd>
 
             <dt>Obraz na iPadzie się zacina</dt>
             <dd>
@@ -86,7 +86,7 @@
             </dd>
 
             <dt>Jak zatrzymać albo przewinąć film na komputerze z iPada?</dt>
-            <dd>Potrzebna jest darmowa aplikacja <a href="mac.html">OverlayPen Remote na Maca</a>. Przyciski przewijania pojawiają się na iPadzie dopiero po połączeniu z nią.</dd>
+            <dd>Potrzebna jest darmowa aplikacja <a href="mac.html">Overlay Pencil Remote na Maca</a>. Przyciski przewijania pojawiają się na iPadzie dopiero po połączeniu z nią.</dd>
         </dl>
     </div>
 </main>
