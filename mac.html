@@ -1,68 +1,80 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Overlay Pencil Remote na Maca — Overlay Pencil</title>
-    <meta name="description" content="Darmowa aplikacja na Maca: zatrzymuj i przewijaj film na komputerze prosto z iPada w aplikacji Overlay Pencil.">
+    <title>Overlay Pencil Remote for Mac</title>
+    <meta name="description" content="Pause and skip a video on your Mac right from the iPad. Free menu bar app for macOS 13 or later.">
+    <meta name="theme-color" content="#F2F2F7">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site">
     <div class="wrap">
-        <a class="brand" href="./">Overlay <span>Pencil</span></a>
-        <nav>
-            <a href="./">O aplikacji</a>
-            <a href="wsparcie.html">Pomoc</a>
-            <a href="mac.html" aria-current="page">Mac</a>
-            <a href="prywatnosc.html">Prywatność</a>
-        </nav>
+        <div class="bar">
+            <a class="brand" href="./"><span class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>Overlay Pencil</a>
+            <nav>
+                <a href="./">App</a>
+                <a href="support.html">Help</a>
+                <a href="mac.html" aria-current="page">Mac</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
     </div>
 </header>
 
 <main>
     <div class="wrap">
-        <h1>Overlay Pencil Remote na Maca</h1>
-        <p class="lead">Zatrzymuj i przewijaj film na komputerze prosto z iPada, bez podchodzenia do klawiatury. Działa z YouTube'em w przeglądarce, z VLC, QuickTime'em i każdym odtwarzaczem, który obsługuje te same skróty.</p>
+        <h1>Overlay Pencil Remote for Mac</h1>
+        <p class="lead">Pause and skip a video on your computer right from the iPad, without walking to the keyboard. Works with YouTube in a browser, VLC, QuickTime and any player that uses the same shortcuts.</p>
 
-        <a class="button" href="https://github.com/nowakproduction/overlay-pencil/releases/latest/download/Overlay-Pencil-Remote.zip">Pobierz Overlay Pencil Remote</a>
-        <p class="note">Darmowa · macOS 13 lub nowszy · Mac z Apple Silicon albo z procesorem Intel · podpisana i poświadczona przez Apple</p>
+        <div class="actions">
+            <a class="button" href="https://github.com/nowakproduction/overlay-pencil/releases/latest/download/Overlay-Pencil-Remote.zip">Download Overlay Pencil Remote</a>
+        </div>
+        <p class="footnote">Free · macOS 13 or later · Apple silicon or Intel · signed and notarized by Apple</p>
 
-        <h2>Instalacja</h2>
+        <h2>Install</h2>
         <ol class="steps">
-            <li>Otwórz pobrany plik ZIP i przeciągnij <strong>Overlay Pencil Remote</strong> do folderu <em>Aplikacje</em>.</li>
-            <li>Uruchom aplikację. Nie ma okna, tylko ikonę <strong>⏯</strong> w pasku menu u góry ekranu.</li>
+            <li>Open the downloaded ZIP file and drag <strong>Overlay Pencil Remote</strong> to your <em>Applications</em> folder.</li>
+            <li>Open the app. It has no window — just a <strong>⏯</strong> icon in the menu bar at the top of the screen.</li>
             <li>
-                <strong>Przyznaj zgodę Dostępność.</strong> Bez niej aplikacja nie może wysyłać skrótów klawiszowych do odtwarzacza. macOS zapyta o nią przy pierwszym uruchomieniu. Jeśli okno zniknęło, otwórz Ustawienia systemowe → <em>Prywatność i ochrona → Dostępność</em> i włącz <em>Overlay Pencil Remote</em>. W menu ⏯ pojawi się wtedy „Zgoda Dostępność: przyznana”.
+                <strong>Grant Accessibility permission.</strong> Without it, the app can't send keyboard shortcuts to the player. macOS asks the first time you open it. If you missed it, go to System Settings → <em>Privacy &amp; Security → Accessibility</em> and turn on <em>Overlay Pencil Remote</em>. The ⏯ menu then shows “Zgoda Dostępność: przyznana” (permission granted).
             </li>
-            <li>Zezwól na dostęp do sieci lokalnej, gdy macOS o to zapyta. Dzięki temu iPad znajdzie komputer.</li>
+            <li>Allow local network access when macOS asks. That's how the iPad finds the computer.</li>
             <li>
-                <strong>Sparuj iPada.</strong> Odczytaj sześciocyfrowy PIN z menu ⏯. Na iPadzie otwórz w aplikacji Overlay Pencil Wybierz źródło → <em>Sterowanie komputerem</em> i wpisz PIN. Po połączeniu na pasku pod obrazem pojawią się przyciski −10, −5, pauza, +5 i +10.
+                <strong>Pair the iPad.</strong> Read the six-digit PIN in the ⏯ menu. On the iPad, open Overlay Pencil → gear icon → <em>Computer Control</em> and enter the PIN. Once connected, the toolbar under the picture shows −10, −5, play/pause, +5 and +10.
             </li>
         </ol>
+        <p class="footnote">The Mac app's menu is in Polish; English translations of its labels are given in brackets above.</p>
 
-        <h2>Jak to działa</h2>
-        <p>iPad wysyła polecenie, a Overlay Pencil Remote naciska na komputerze skrót klawiszowy odtwarzacza: <kbd>K</kbd> to pauza, <kbd>J</kbd> i <kbd>L</kbd> przewijają o 10 sekund, a strzałki <kbd>←</kbd> i <kbd>→</kbd> o 5 sekund.</p>
-        <p>Domyślnie skróty trafiają do aplikacji, która jest na wierzchu. Jeśli na komputerze pracujesz w czymś innym, wybierz w menu ⏯ → <em>Steruj aplikacją</em> konkretną aplikację z filmem. Skróty trafią do niej, nawet gdy nie będzie na wierzchu.</p>
+        <h2>How it works</h2>
+        <div class="card">
+            <p>The iPad sends a command, and Overlay Pencil Remote presses the player's shortcut on the computer: <kbd>K</kbd> pauses, <kbd>J</kbd> and <kbd>L</kbd> skip 10 seconds, and the <kbd>←</kbd> <kbd>→</kbd> arrows skip 5 seconds.</p>
+            <p>By default the shortcuts go to the app in front. If you're working in something else on the computer, pick the app with the video in the ⏯ menu → <em>Steruj aplikacją</em> (Control app). The shortcuts then reach it even when it isn't in front.</p>
+        </div>
 
-        <h2>Film z przeglądarki w OBS-ie</h2>
-        <p>Jeśli OBS przechwytuje okno przeglądarki z YouTube'em, a Ty sterujesz nim z iPada, przeglądarka nie jest aktywnym oknem. Chrome może wtedy zwalniać renderowanie, a YouTube obniżać jakość. Dwie rzeczy temu zapobiegają:</p>
-        <ul>
-            <li>Ustaw w odtwarzaczu YouTube'a jakość na sztywno: koło zębate → Jakość → 1080p zamiast „Auto”.</li>
-            <li>Zamknij Chrome w całości (<kbd>⌘Q</kbd>) i uruchom go z Terminala tak:</li>
-        </ul>
-        <pre><code>open -a "Google Chrome" --args --disable-backgrounding-occluded-windows --disable-renderer-backgrounding</code></pre>
+        <h2>A browser video in OBS</h2>
+        <div class="card">
+            <p>If OBS captures a browser window with YouTube and you control it from the iPad, the browser isn't the active window. Chrome may then slow down rendering and YouTube may lower the quality. Two things prevent that:</p>
+            <ul>
+                <li>Set YouTube's quality manually: gear icon → Quality → 1080p instead of “Auto”.</li>
+                <li>Quit Chrome completely (<kbd>⌘Q</kbd>) and start it from Terminal like this:</li>
+            </ul>
+            <pre><code>open -a "Google Chrome" --args --disable-backgrounding-occluded-windows --disable-renderer-backgrounding</code></pre>
+        </div>
 
-        <h2>Odinstalowanie</h2>
-        <p>Zakończ aplikację z menu ⏯ i przenieś ją z folderu <em>Aplikacje</em> do kosza. Wpis w <em>Prywatność i ochrona → Dostępność</em> możesz usunąć przyciskiem „−”.</p>
+        <h2>Uninstall</h2>
+        <div class="card">
+            <p>Quit the app from the ⏯ menu and move it from <em>Applications</em> to the Trash. You can remove its entry in <em>Privacy &amp; Security → Accessibility</em> with the “−” button.</p>
+        </div>
 
-        <p class="note">Overlay Pencil Remote zawiera biblioteki NDI®. Noty licencyjne tych bibliotek są w pakiecie aplikacji: <code>Contents/Resources/libndi_licenses.txt</code>.</p>
+        <p class="footnote">Overlay Pencil Remote includes NDI® libraries. Their license notices are inside the app bundle: <code>Contents/Resources/libndi_licenses.txt</code>.</p>
     </div>
 </main>
 
 <footer class="site">
     <div class="wrap">
-        <p>© NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="prywatnosc.html">Polityka prywatności</a></p>
+        <p>© 2026 NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="privacy.html">Privacy Policy</a></p>
         <p>NDI® is a registered trademark of Vizrt NDI AB. <a href="https://ndi.video/">ndi.video</a></p>
     </div>
 </footer>

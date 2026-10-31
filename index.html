@@ -1,58 +1,120 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Overlay Pencil — rysowanie po obrazie z OBS-a na iPadzie</title>
-    <meta name="description" content="Overlay Pencil to aplikacja na iPada do rysowania po obrazie z OBS-a. Warstwa rysunku wraca do OBS-a jako osobne, przezroczyste źródło NDI®.">
+    <title>Overlay Pencil — draw over your OBS picture on iPad</title>
+    <meta name="description" content="Overlay Pencil is an iPad app for drawing over the picture from OBS. The drawing goes back to OBS as a separate, transparent NDI® source.">
+    <meta name="theme-color" content="#F2F2F7">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="site">
     <div class="wrap">
-        <a class="brand" href="./">Overlay <span>Pencil</span></a>
-        <nav>
-            <a href="./" aria-current="page">O aplikacji</a>
-            <a href="wsparcie.html">Pomoc</a>
-            <a href="mac.html">Mac</a>
-            <a href="prywatnosc.html">Prywatność</a>
-        </nav>
+        <div class="bar">
+            <a class="brand" href="./"><span class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>Overlay Pencil</a>
+            <nav>
+                <a href="./" aria-current="page">App</a>
+                <a href="support.html">Help</a>
+                <a href="mac.html">Mac</a>
+                <a href="privacy.html">Privacy</a>
+            </nav>
+        </div>
     </div>
 </header>
 
 <main>
     <div class="wrap">
-        <h1>Rysuj po obrazie z OBS-a na iPadzie</h1>
-        <p class="lead">Overlay Pencil pokazuje na iPadzie obraz z OBS-a. Rysujesz po nim rysikiem albo palcem, a rysunek wraca do OBS-a jako osobne, przezroczyste źródło. Widzowie widzą Twoje adnotacje na żywo, nałożone na obraz.</p>
+        <h1>Draw over your OBS picture on iPad</h1>
+        <p class="lead">Overlay Pencil shows the picture from OBS on your iPad. You draw over it with Apple Pencil or a finger, and the drawing goes back to OBS as a separate, transparent source. Your audience sees the notes live, on top of the picture.</p>
 
-        <div class="card">
-            <p><strong>Wkrótce w App Store.</strong> Aplikacja jest w przygotowaniu do wydania.</p>
+        <div class="actions">
+            <a class="button" href="support.html">How to set it up</a>
+            <span class="button soon" aria-disabled="true">Coming soon to the App Store</span>
         </div>
 
-        <h2>Jak to działa</h2>
-        <ol class="steps">
-            <li>OBS wysyła obraz programu w sieci lokalnej przez <a href="https://ndi.video/">NDI®</a>, a iPad go odbiera.</li>
-            <li>Rysujesz po tym obrazie na iPadzie. Możesz zmieniać kolor i grubość, cofać kreski i czyścić całość jednym dotknięciem.</li>
-            <li>iPad odsyła do OBS-a <strong>samą warstwę rysunku</strong>, z przezroczystym tłem. W OBS-ie kładziesz ją nad obrazem i to OBS składa całość.</li>
-        </ol>
-        <p>iPad nie odsyła obrazu wideo, tylko rysunek. Dzięki temu nic nie traci na jakości i nie ma podwójnego kodowania pełnej klatki.</p>
+        <div class="scene" role="img" aria-label="Overlay Pencil on iPad: the picture from OBS with a red circle and arrow drawn over it, a status pill, a settings button and the toolbar">
+            <div class="frame"></div>
+            <div class="chrome-top">
+                <span class="s-pill"><span class="dot"></span>OBS Program<span class="sep"></span><span class="ok">1 receiver</span></span>
+                <span class="s-gear"><svg viewBox="0 0 24 24" fill="none" stroke="#1C1C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            </div>
+            <div class="chrome-bottom">
+                <div class="toolbar">
+                    <span class="tool"><span class="swatch"></span></span>
+                    <span class="tool"><span class="width-mark"></span></span>
+                    <span class="divider"></span>
+                    <span class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></span>
+                    <span class="tool disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg></span>
+                    <span class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg></span>
+                    <span class="divider"></span>
+                    <span class="tool selected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></span>
+                    <span class="divider"></span>
+                    <span class="tool"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
+                    <span class="tile"><b>3</b></span>
+                </div>
+            </div>
+        </div>
+        <p class="caption">The stage on iPad: the picture from OBS, your drawing, and controls that stay out of the frame.</p>
 
-        <h2>Czego potrzebujesz</h2>
-        <ul>
-            <li>iPada z iPadOS 17 lub nowszym.</li>
-            <li>Komputera z <a href="https://obsproject.com/">OBS Studio</a> i wtyczką <a href="https://github.com/DistroAV/DistroAV">DistroAV</a>, która dodaje do OBS-a obsługę NDI.</li>
-            <li>iPada i komputera w tej samej sieci lokalnej. Najlepiej z komputerem podłączonym kablem i iPadem w sieci 5 GHz.</li>
-        </ul>
-        <p>Konfigurację krok po kroku znajdziesz w <a href="wsparcie.html">pomocy</a>.</p>
+        <h2>How it works</h2>
+        <div class="list">
+            <div class="row">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 16.24a6 6 0 0 1 0-8.49M19.07 4.93a10 10 0 0 1 0 14.14M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>
+                <div><h3>OBS sends its picture to the iPad</h3><p>Over your local network, using <a href="https://ndi.video/">NDI®</a>. Pick the OBS output in Overlay Pencil and it appears on the stage.</p></div>
+            </div>
+            <div class="row">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                <div><h3>You draw over it</h3><p>Seven brush colours, any width, undo and redo, a composition grid, and snapshots of annotated frames you can save to Photos later.</p></div>
+            </div>
+            <div class="row">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></svg>
+                <div><h3>OBS gets the drawing back as its own layer</h3><p>The iPad sends only the drawing, on a transparent background. You place it above the picture in your OBS scene, and OBS composites everything. The picture is never re-encoded, so it keeps its full quality.</p></div>
+            </div>
+        </div>
 
-        <h2>Sterowanie filmem na komputerze</h2>
-        <p>Jeśli na komputerze leci film, na przykład z YouTube'a w przeglądarce, możesz go zatrzymywać i przewijać o 5 albo 10 sekund prosto z iPada. Potrzebna jest do tego darmowa aplikacja <a href="mac.html">Overlay Pencil Remote na Maca</a>. Bez niej Overlay Pencil działa normalnie.</p>
+        <h2>What you need</h2>
+        <div class="card">
+            <ul class="checks">
+                <li>An iPad with iPadOS 17 or later.</li>
+                <li>A computer with <a href="https://obsproject.com/">OBS Studio</a> and the <a href="https://github.com/DistroAV/DistroAV">DistroAV</a> plugin, which adds NDI to OBS.</li>
+                <li>The iPad and the computer on the same local network — ideally the computer on a cable and the iPad on 5 GHz Wi-Fi.</li>
+            </ul>
+        </div>
+        <p class="footnote">Step-by-step setup is on the <a href="support.html">Help</a> page.</p>
+
+        <h2>Free and Premium</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Free</span>
+                <h3>Try everything</h3>
+                <p class="note">All features, with limits that make it clear it's the free version.</p>
+                <ul class="checks muted">
+                    <li>“Overlay Pencil” watermark across the frame, on iPad and in OBS</li>
+                    <li>Sessions of 2 minutes — then the stage is covered until you restart the app</li>
+                </ul>
+            </div>
+            <div class="card">
+                <span class="tag accent">Premium</span>
+                <h3>No watermark, no time limit</h3>
+                <p class="note">A one-time in-app purchase. No subscription. It stays with your Apple ID and works on all your iPads.</p>
+                <ul class="checks">
+                    <li>Clean picture in OBS</li>
+                    <li>Unlimited sessions</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Control a video on your Mac</h2>
+        <div class="card">
+            <p>If a video is playing on your computer — YouTube in a browser, VLC, QuickTime — you can pause it and skip 5 or 10 seconds right from the iPad. You'll need the free <a href="mac.html">Overlay Pencil Remote</a> app for Mac. Without it, Overlay Pencil works as usual and the playback buttons simply don't appear.</p>
+        </div>
     </div>
 </main>
 
 <footer class="site">
     <div class="wrap">
-        <p>© NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="prywatnosc.html">Polityka prywatności</a></p>
+        <p>© 2026 NowakProduction · <a href="mailto:nowakproduction@gmail.com">nowakproduction@gmail.com</a> · <a href="privacy.html">Privacy Policy</a></p>
         <p>NDI® is a registered trademark of Vizrt NDI AB. <a href="https://ndi.video/">ndi.video</a></p>
     </div>
 </footer>
